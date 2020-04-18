@@ -7,7 +7,10 @@
     <title>Meili</title>
 </head>
 <body>
-    <h1>Meili</h1>
+    <header>
+        <h1>Meili<i id="h1Heart" class='fas fa-heart'><i id="h1Heart" class='fas fa-heart'></i></i></h1>
+        <h2 >The Most Beautiful Handmade Earrings <i class='far fa-gem' style='font-size:20px'> <i class='fas fa-magic'></i></i></h2>
+    </header>
     <div id="banner">
         <form>
             <select>
@@ -16,161 +19,161 @@
                 <option value="gol">Gold</option>
                 <option value="han">Hand Made</option>
                 <option value="fro">From Korea</option>
+                <option value="fav">Your Favorites</option>
             </select>
         </form>
-        <p class="favorite">Your Favorites <i class='fas fa-heart'></i></p>
-        <i id="shoppingC" class='fas fa-cart-arrow-down'></i>
+        <div id="bannerIcons">
+            <div id="basket">
+                <i id="shoppingC" class='fas fa-shopping-basket'></i> <span id="numBasket">0</span>
+            </div>
+            <div id="favorite">
+                <i id="bannerH" class='fas fa-heart'></i> <span id="numFavorite">0</span>
+            </div>
+        </div>
+        
     </div>
-    <div class="products" >
-        <div id="contents">
-            <div class="items">
-                <img class="img" src="pictures/earrings1.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Bell Love</span></p>
-                    <p>$20</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+    <div id="contents">
+        <div class="items">
+            <img class="img" src="pictures/earrings1.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Bell Love</p>
+                <p>$20</p>
             </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings2.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Floral</span></p>
-                    <p>$28</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
-            </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings3.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Colors</span></p>
-                    <p>$30</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
             </div>
         </div>
-        <div id="contents">
-            <div class="items">
-                <img class="img" src="pictures/earrings5.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Bell Love</span></p>
-                    <p>$20</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings2.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Floral</p>
+                <p>$28</p>
             </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings6.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Floral</span></p>
-                    <p>$28</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
-            </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings7.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Colors</span></p>
-                    <p>$30</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
             </div>
         </div>
-        <div id="contents">
-            <div class="items">
-                <img class="img" src="pictures/earrings8.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Bell Love</span></p>
-                    <p>$20</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings3.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Colors</p>
+                <p>$30</p>
             </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings9.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Floral</span></p>
-                    <p>$28</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
-            </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings10.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Colors</span></p>
-                    <p>$30</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
             </div>
         </div>
-        <div id="contents">
-            <div class="items">
-                <img class="img" src="pictures/earrings11.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Bell Love</span></p>
-                    <p>$20</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings5.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Margarita</p>
+                <p>$25</p>
             </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings12.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Floral</span></p>
-                    <p>$28</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
             </div>
-            <div class="items">
-                <img class="img" src="pictures/earrings13.jpg" alt="earrings"/>
-                <div class="details">
-                    <p><span>My Colors</span></p>
-                    <p>$30</p>
-                </div>
-                <div class="icons" >
-                    <i id="heartIcon" class='far fa-heart'></i>
-                    <i id="shopIcon" class='fas fa-cart-plus'></i>
-                </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings6.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Gala</p>
+                <p>$35</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings7.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Mary</p>
+                <p>$20</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings8.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Crazy Love</p>
+                <p>$22</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings9.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Wheel of Love</p>
+                <p>$30</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings10.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Brown Flower</p>
+                <p>$30</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings11.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Little Star</p>
+                <p>$20</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings12.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My Double Love</p>
+                <p>$28</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
+            </div>
+        </div>
+        <div class="items">
+            <img class="img" src="pictures/earrings13.jpg" alt="earrings"/>
+            <div class="details">
+                <p class="nameP">My FLoral</p>
+                <p>$28</p>
+            </div>
+            <div class="icons" >
+                <i id="heartIcon" class='far fa-heart'></i>
+                <i id="shopIcon" class='fas fa-cart-plus'></i>
             </div>
         </div>
     </div>
     <footer>
         <div id="footerInfo">
-            <h2>Meili</h2>
+            <h3>Meili</h3>
             <div class="social"><i class='fab fa-facebook-f'></i></div>
             <div class="social"><i class='fab fa-instagram'></i></div>
         </div>
     </footer>
-   <script src="meili.js"></script> 
+    <script src="meili.js"></script> 
    <script src="https://kit.fontawesome.com/5876ad7321.js" crossorigin="anonymous"></script>
 </body>
 
