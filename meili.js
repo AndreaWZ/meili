@@ -14,21 +14,22 @@ function init(){
 }
 function shopIcons(){
     let customerChoose;
-    for(let i = 0; i < shopIcon.length; i++){
-        shopIcon[i].addEventListener("click", function(){
-            shopIcon[i].classList.toggle("fa-cart-plus");
-            shopIcon[i].classList.toggle("fa-cart-arrow-down");
-            customerChoose = shopIcon[i].className;
-            numBasket.textContent = totalNumBas;
-            if(customerChoose === "fas fa-cart-arrow-down"){
-                console.log(customerChoose);
-                totalNumBas++;
-            } else if(customerChoose === "fas fa-cart-plus"){
-                console.log(customerChoose);
-                totalNumBas--;
-            }
-        })
-    }
+    console.log('shop')
+    // for(let i = 0; i < shopIcon.length; i++){
+    //     shopIcon[i].addEventListener("click", function(){
+    //         shopIcon[i].classList.toggle("fa-cart-plus");
+    //         shopIcon[i].classList.toggle("fa-cart-arrow-down");
+    //         customerChoose = shopIcon[i].className;
+    //         numBasket.textContent = totalNumBas;
+    //         if(customerChoose === "fas fa-cart-arrow-down"){
+    //             console.log(customerChoose);
+    //             totalNumBas++;
+    //         } else if(customerChoose === "fas fa-cart-plus"){
+    //             console.log(customerChoose);
+    //             totalNumBas--;
+    //         }
+    //     })
+    // }
 }
 function heartIcons(){
     let customerFavo;

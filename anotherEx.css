@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+#wrapper {
+    display: inline-block;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+}
+
+.fa-angellist{
+    margin: 20px;
+}
