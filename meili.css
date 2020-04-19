@@ -124,10 +124,10 @@ p {
     font-size: 20px;
     font-family: Optima, sans-serif ;
 }
-.nameP {
+.p {
     cursor: pointer;
 }
-p.nameP:hover {
+p.p:hover {
     height: 25px;
     padding-top: 3px;
     color:white;
@@ -141,24 +141,25 @@ p.nameP:hover {
     display: flex;
     justify-content: space-between;
 }
-#shopIcon {
+.fa-cart-plus {
     font-size:20px;
     cursor: pointer;
 }
-#shopIcon:hover {
+.fa-cart-plus:hover {
     color: green;
 }
 .fas.fa-cart-arrow-down {
+    font-size:20px;
     color:green;
 }
-#heartIcon {
+.fa-heart {
     font-size:20px;
     cursor: pointer;
 }
-#heartIcon:hover {
+.fa-heart.far:hover {
     color: #FFD700;
 }
-.fas.fa-heart{
+.fa-heart.fas{
     color: #FFD700;
 }
 
