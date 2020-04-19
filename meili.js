@@ -1,3 +1,24 @@
+window.onload = function(){
+    const contentsDiv = document.getElementById("contents");
+    const earrings = [];
+
+    for(let i = 1; i < 13; i++){
+        let object = {};
+        object["url"] = "pictures/earrings" + i + ".jpg";
+        earrings.push(object);
+    }
+    for(let i = 0; i < earrings.length; i++){
+        const div = document.createElement("div");
+        const img = document.createElement("img");
+
+        img.src = earrings[i].url;
+        div.appendChild(img);
+        contentsDiv.appendChild(div);
+        div.classList.add("itemDetails")
+        img.classList.add("images");
+    }
+}
+
 let heartIcon = document.querySelectorAll("i#heartIcon");
 let shopIcon = document.querySelectorAll("i#shopIcon");
 let numBasket = document.getElementById("numBasket");
