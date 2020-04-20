@@ -61,24 +61,22 @@ select:hover {
     display: flex;
     justify-content: space-between;
 }
-#shoppingC {
+#basketIcon {
     color: white;
     padding-right: 5px;
     cursor: pointer;
     font-size: 25px;
 }
-#shoppingC:hover {
+#basketIcon:hover {
     color: #FFD700;
 }
-#favorite {
-    
-}
-#bannerH {
+#heart {
     color: white;
+    padding-right: 5px;
     cursor: pointer;
     font-size: 25px;
 }
-#bannerH:hover {
+#heart:hover {
     color: #FFD700;
 }
 span {
