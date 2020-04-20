@@ -1,4 +1,10 @@
 window.onload = function(){
+    shoppingDetails();
+    loveIcon();
+    shopIcon();
+}
+
+function shoppingDetails(){
     const contentsDiv = document.getElementById("contents");
     const earrings = [];
 
@@ -77,30 +83,66 @@ window.onload = function(){
         iconFav.classList.add("far");
         iconShop.classList.add("fa-cart-plus");
         iconShop.classList.add("fas");
-
-    }
-
-    const heartIcon = document.getElementsByClassName("fa-heart"+" far");
-    const clicks = [];
-    let totalNumHearts = 1;
-    for(let i = 0; i < heartIcon.length; i++){
-        heartIcon[i].addEventListener("click", function(){
-            this.classList.toggle("far");
-            this.classList.toggle("fas");
-            numHeart.textContent = totalNumHearts;
-            console.log(numHeart.textContent + "  " + totalNumHearts);
-            if(!clicks[i]) {
-                clicks[i] = true;
-                totalNumHearts++;
-            } else {
-                clicks[i] = false;
-                totalNumHearts--;
-            } 
-            console.log(clicks[i]);
-        })
-        clicks.push(false);
     }
 }
 
-
-
+function loveIcon(){
+    const favorite = document.getElementById("fullHeartIcon");
+    const heartIcon = document.getElementsByClassName("fa-heart"+" far");
+    const numH = document.getElementById("numHeart")
+    const clicksH = [];
+    let totalNumHearts = 0;
+    for(let i = 0; i < heartIcon.length; i++){
+        clicksH.push(false);
+        heartIcon[i].addEventListener("click", function(){
+            this.classList.toggle("far");
+            this.classList.toggle("fas");
+            if(clicksH[i] === false) {
+                clicksH[i] = true;
+                totalNumHearts++;
+            } else {
+                clicksH[i] = false;
+                totalNumHearts--;
+            } 
+            console.log(clicksH);
+            numH.textContent = totalNumHearts;
+            if(numH.textContent >= 1){
+                favorite.style.color = "red";
+                numH.style.color = "black";
+            } else {
+                favorite.style.color = "white";
+                numH.style.color = "white";
+            }
+        })
+    }
+}
+function shopIcon(){
+    const shop = document.getElementById("basketIcon");
+    const basketIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
+    const numB = document.getElementById("numBasket");
+    const clicksB = [];
+    let totalNumBaskets = 0;
+    for(let i = 0; i < basketIcon.length; i++){
+        clicksB.push(false);
+        basketIcon[i].addEventListener("click", function(){
+            this.classList.toggle("fa-cart-plus");
+            this.classList.toggle("fa-cart-arrow-down");
+            if(clicksB[i] === false) {
+                clicksB[i] = true;
+                totalNumBaskets++;
+            } else {
+                clicksB[i] = false;
+                totalNumBaskets--;
+            } 
+            console.log(clicksB);
+            numB.textContent = totalNumBaskets;
+            if(numB.textContent >= 1){
+                shop.style.color = "blue";
+                numB.style.color = "black";
+            } else {
+                shop.style.color = "white";
+                numB.style.color = "white";
+            }
+        })
+    }
+}
