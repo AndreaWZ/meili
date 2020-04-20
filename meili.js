@@ -80,32 +80,25 @@ window.onload = function(){
 
     }
 
-    let heartIcon = document.getElementsByClassName("far"+" fa-heart");
-    let shopCartIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
-
-    init();
-
-    function init(){
-        heartIcons();
-        shopCartIcons();
-    }
-
-    function heartIcons(){
-        for(let i = 0; i < heartIcon.length; i++){
-            heartIcon[i].addEventListener("click", function(){
-                this.classList.toggle("far");
-                this.classList.toggle("fas");
-            })
-        }
-    }
-    function shopCartIcons(){
-        // let customerChoose;
-        for(let i = 0; i < shopCartIcon.length; i++){
-            shopCartIcon[i].addEventListener("click", function(){
-                this.classList.toggle("fa-cart-plus");
-                this.classList.toggle("fa-cart-arrow-down");
-            })
-        }
+    const heartIcon = document.getElementsByClassName("fa-heart"+" far");
+    const clicks = [];
+    let totalNumHearts = 1;
+    for(let i = 0; i < heartIcon.length; i++){
+        heartIcon[i].addEventListener("click", function(){
+            this.classList.toggle("far");
+            this.classList.toggle("fas");
+            numHeart.textContent = totalNumHearts;
+            console.log(numHeart.textContent + "  " + totalNumHearts);
+            if(!clicks[i]) {
+                clicks[i] = true;
+                totalNumHearts++;
+            } else {
+                clicks[i] = false;
+                totalNumHearts--;
+            } 
+            console.log(clicks[i]);
+        })
+        clicks.push(false);
     }
 }
 
