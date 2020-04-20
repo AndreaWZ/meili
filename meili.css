@@ -67,17 +67,11 @@ select:hover {
     cursor: pointer;
     font-size: 25px;
 }
-#basketIcon:hover {
-    color: #FFD700;
-}
-#heart {
+#fullHeartIcon {
     color: white;
     padding-right: 5px;
     cursor: pointer;
     font-size: 25px;
-}
-#heart:hover {
-    color: #FFD700;
 }
 span {
     color: white;
@@ -151,14 +145,14 @@ p.p:hover {
     color:green;
 }
 .fa-heart {
-    font-size:20px;
+    font-size:25px;
     cursor: pointer;
 }
 .fa-heart.far:hover {
-    color: #FFD700;
+    color: red;
 }
 .fa-heart.fas{
-    color: #FFD700;
+    color: red;
 }
 
 /* Footer */
