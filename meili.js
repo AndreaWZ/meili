@@ -3,51 +3,63 @@ window.onload = function(){
     loveIcon();
     shopIcon();
     clickShopIcon();
+    modalProducts();
 };
 
+const earrings = [];
 function shoppingDetails(){
     const contentsDiv = document.getElementById("contents");
-    const earrings = [];
-
     for(let i = 1; i < 13; i++){
         let object = {};
         object["url"] = "pictures/earrings" + i + ".jpg";
         if(i === 1){
-            object['title'] = "My Bell Love";
+            object['title'] = "Reb Bow";
             object['value'] = "$20";
+            object['material'] = "Silver Split";
         } else if(i === 2){
             object['title'] = "My Floral";
             object['value'] = "$28";
+            object['material'] = "Titanium";
         } else if(i === 3){
             object['title'] = "My Colors";
             object['value'] = "$25";
+            object['material'] = "Titanium";
         } else if(i === 4){
             object['title'] = "My Florals";
-            object['value'] = "$20";
+            object['value'] = "$28";
+            object['material'] = "Titanium";
         } else if(i === 5){
             object['title'] = "My Margarita";
             object['value'] = "$30";
+            object['material'] = "Titanium";
         } else if(i === 6){
             object['title'] = "My Gala";
             object['value'] = "$22";
+            object['material'] = "Titanium";
         } else if(i === 7){
             object['title'] = "My Mary";
             object['value'] = "$30";
+            object['material'] = "Gold | Silver";
         } else if(i === 8){
             object['title'] = "My Crazy Love";
             object['value'] = "$29";
+            object['material'] = "Silver Split";
         } else if(i === 9){
             object['title'] = "My Wheel of Love";
             object['value'] = "$35";
+            object['material'] = "Titanium";
         } else if(i === 10){
             object['title'] = "My Brown Flower";
             object['value'] = "$38";
+            object['material'] = "Titanium";
         } else if(i === 11){
             object['title'] = "My Little Star";
             object['value'] = "$20";
+            object['material'] = "Gold";
         } else if(i === 12){
             object['title'] = "My Double Love";
             object['value'] = "$23";
+            object['material'] = "Titanium";
         }
 
         earrings.push(object);
@@ -78,14 +90,19 @@ function shoppingDetails(){
         div.classList.add("itemDetails");
         img.classList.add("images");
         details.classList.add("details");
-        title.classList.add("p");
+        title.classList.add("title");
+        value.classList.add("value");
         icons.classList.add("icons");
         iconFav.classList.add("fa-heart");
         iconFav.classList.add("far");
         iconShop.classList.add("fa-cart-plus");
         iconShop.classList.add("fas");
     };
+    // for(let i = 0; i < earrings.length; i++){
+    //     console.log(earrings[i].material);
+    // }
 };
+
 function loveIcon(){
     const favorite = document.getElementById("fullHeartIcon");
     const heartIcon = document.getElementsByClassName("fa-heart"+" far");
@@ -117,34 +134,33 @@ function loveIcon(){
 };
 function shopIcon(){
     const shop = document.getElementById("basketIcon");
-    const basketIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
-    const numB = document.getElementById("numBasket");
-    const clicksB = [];
-    let totalNumBaskets = 0;
-    for(let i = 0; i < basketIcon.length; i++){
-        clicksB.push(false);
-        basketIcon[i].addEventListener("click", function(){
+    const cartIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
+    const numBaskets = document.getElementById("numBasket");
+    const clicksC = [];
+    let totalNumCarts = 0;
+    for(let i = 0; i < cartIcon.length; i++){
+        clicksC.push(false);
+        cartIcon[i].addEventListener("click", function(){
             this.classList.toggle("fa-cart-plus");
             this.classList.toggle("fa-cart-arrow-down");
-            if(clicksB[i] === false) {
-                clicksB[i] = true;
-                totalNumBaskets++;
+            if(clicksC[i] === false) {
+                clicksC[i] = true;
+                totalNumCarts++;
             } else {
-                clicksB[i] = false;
-                totalNumBaskets--;
+                clicksC[i] = false;
+                totalNumCarts--;
             } 
-            numB.textContent = totalNumBaskets;
-            if(numB.textContent >= 1){
+            numBaskets.textContent = totalNumCarts;
+            if(numBaskets.textContent >= 1){
                 shop.style.color = "blue";
-                numB.style.color = "black";
+                numBaskets.style.color = "black";
             } else {
                 shop.style.color = "white";
-                numB.style.color = "white";
+                numBaskets.style.color = "white";
             };
         });
-        // console.log(basketIcon[i].parentElement.parentElement);
-        basketIcon[i].addEventListener("click", function(){
-            console.log(this.parentElement.parentElement);
+        cartIcon[i].addEventListener("click", function(){
+            // console.log(this.parentElement.parentElement);
         })
     };
 };
@@ -155,3 +171,29 @@ function clickShopIcon(){
     });
 };
 
+// Modal's Products
+function modalProducts(){
+    const modal = document.getElementById("myModal")
+    const img = document.getElementsByClassName("images");
+    const modalImg = document.getElementById("img01");
+    const prodName = document.getElementById("prodName");
+    const picturesName = document.getElementsByClassName("title");
+    const earringsPrice = document.getElementsByClassName("value");
+
+    for(let i = 0; i < img.length; i++){
+        img[i].addEventListener("click", function(){
+            modal.style.display = "block";
+            modalImg.src = img[i].src;
+            prodName.innerHTML = picturesName[i].textContent + " " + earringsPrice[i].textContent;
+        });
+        for(let i = 0; i <picturesName.length; i++){
+        };
+        for(let i = 0; i < earringsPrice.length; i++){
+        };
+    };
+    const span = document.getElementsByClassName("close")[0];
+    span.addEventListener("click", function(){
+        modal.style.display = "none";
+    }) ;
+    
+};

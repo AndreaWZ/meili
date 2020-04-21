@@ -19,6 +19,7 @@
                 <option value="all">All</option>
                 <option value="sil">Silver</option>
                 <option value="gol">Gold</option>
+                <option value="sil">Titanium</option>
                 <option value="han">Hand Made</option>
                 <option value="fro">From Korea</option>
                 <option value="fav">Your Favorites</option>
@@ -26,7 +27,7 @@
         </form>
         <div id="bannerIcons">
             <div id="basket">
-                <i id="basketIcon" class='fas fa-shopping-basket'></i><span id="numBasket">0</span>
+                <dfn title="Shopping List"><i id="basketIcon" class='fas fa-shopping-basket'></i></dfn><span id="numBasket">0</span>
             </div>
             <div id="favorite">
                 <i id="fullHeartIcon" class='fas fa-heart'></i><span id="numHeart">0</span>
@@ -34,6 +35,15 @@
         </div>
     </div>
     <div id="contents"></div>
+    <div id="myModal" class="modal">
+        <div id="displayModal">
+            <div id="modal">
+                <img class="modal-content" id="img01">
+                <div id="prodName"></div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+    </div>
     <footer>
         <div id="footerInfo">
             <h3>Meili</h3>
@@ -42,5 +52,4 @@
         </div>
     </footer>
 </body>
-
 </html>
