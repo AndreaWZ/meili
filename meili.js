@@ -2,7 +2,8 @@ window.onload = function(){
     shoppingDetails();
     loveIcon();
     shopIcon();
-}
+    clickShopIcon();
+};
 
 function shoppingDetails(){
     const contentsDiv = document.getElementById("contents");
@@ -50,7 +51,7 @@ function shoppingDetails(){
         }
 
         earrings.push(object);
-    }
+    };
     for(let i = 0; i < earrings.length; i++){
         const div = document.createElement("div");
         const img = document.createElement("img");
@@ -83,9 +84,8 @@ function shoppingDetails(){
         iconFav.classList.add("far");
         iconShop.classList.add("fa-cart-plus");
         iconShop.classList.add("fas");
-    }
-}
-
+    };
+};
 function loveIcon(){
     const favorite = document.getElementById("fullHeartIcon");
     const heartIcon = document.getElementsByClassName("fa-heart"+" far");
@@ -104,7 +104,6 @@ function loveIcon(){
                 clicksH[i] = false;
                 totalNumHearts--;
             } 
-            console.log(clicksH);
             numH.textContent = totalNumHearts;
             if(numH.textContent >= 1){
                 favorite.style.color = "red";
@@ -112,10 +111,10 @@ function loveIcon(){
             } else {
                 favorite.style.color = "white";
                 numH.style.color = "white";
-            }
-        })
-    }
-}
+            };
+        }); 
+    };
+};
 function shopIcon(){
     const shop = document.getElementById("basketIcon");
     const basketIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
@@ -134,7 +133,6 @@ function shopIcon(){
                 clicksB[i] = false;
                 totalNumBaskets--;
             } 
-            console.log(clicksB);
             numB.textContent = totalNumBaskets;
             if(numB.textContent >= 1){
                 shop.style.color = "blue";
@@ -142,7 +140,18 @@ function shopIcon(){
             } else {
                 shop.style.color = "white";
                 numB.style.color = "white";
-            }
+            };
+        });
+        // console.log(basketIcon[i].parentElement.parentElement);
+        basketIcon[i].addEventListener("click", function(){
+            console.log(this.parentElement.parentElement);
         })
-    }
-}
+    };
+};
+function clickShopIcon(){
+    const shopIcon = document.getElementById("basketIcon");
+    shopIcon.addEventListener("click", function(){
+        window.document.location = './index2.html';
+    });
+};
+

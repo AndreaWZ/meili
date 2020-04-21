@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 1200px;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #006400;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    margin: 0;
+    padding-left: 60px;
+    color: #fbefcc;
+    font-size: 90px;
+    font-family: Brush Script MT;
+}
+#h1Heart {
+    font-size: 15px; 
+    padding-left:10px; 
+    color:#fbefcc;
+}
+
+/* Banner */
+#banner{
+    margin: 0;
+    background-color: rgb(228, 197, 21);
+}
+h2 {
+    margin: 0;
+    padding-bottom: 5px;
+    text-align: center;
+    color: white;
+    font-family: Comic Sans MS;
+    font-size: 30px;
+}
