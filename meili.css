@@ -170,12 +170,12 @@ p.title:hover {
     height: 100%; 
     overflow: auto; 
     background-color: rgba(255, 255, 255, 0.801);
-  }
-  #displayModal {
+}
+#displayModal {
     display: flex;
     justify-content: center;
-  }
-  .modal-content {
+}
+.modal-content {
     display: flex;
     justify-content: center;
     margin: auto;
@@ -183,18 +183,19 @@ p.title:hover {
     width: 500px;
     height: 500px;
     border-radius: 10px;
-  }
-  #modal {
+}
+#modal {
     width: 600px;
-    height: 600px;
+    height: 650px;
     padding-top: 35px;
     background-color: white;
     border: 5px rgba(143, 188, 143, 0.753) solid;
     border-radius: 10px;
-  }
-  #prodName {
+}
+#prod {
     margin: auto;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 80%;
     max-width: 700px;
     text-align: center;
@@ -202,23 +203,28 @@ p.title:hover {
     padding-top: 20px;
     height: 50px;
     font-size: 30px;
-    letter-spacing: 3px;
-  }
-  .modal-content, #prodName {  
+}
+#prodMat, #prodColor {
+    padding-top: 5px;
+    padding-left: 60px;
+    color: gray;
+    font-size: larger;
+}
+.modal-content, #prod, #prodMat, #prodColor {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.5s;
     animation-name: zoom;
     animation-duration: 0.5s;
-  }
-  @-webkit-keyframes zoom {
+}
+@-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
-  }
-  @keyframes zoom {
+}
+@keyframes zoom {
     from {transform:scale(0)} 
     to {transform:scale(1)}
-  }
-  .close {
+}
+.close {
     position: absolute;
     top: 18px;
     right: 35px;
@@ -226,18 +232,40 @@ p.title:hover {
     font-size: 45px;
     font-weight: bold;
     transition: 0.3s;
-  }
-  
-  .close:hover {
+}
+
+.close:hover {
     text-decoration: none;
     cursor: pointer;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
-  }
-  @media only screen and (max-width: 700px){
+}
+@media only screen and (max-width: 700px){
     .modal-content {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
+
+/* Favorite's Modal */
+
+/* #favoriteModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 68px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(255, 255, 255, 0.801);
+}
+#favoDisplay {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(4, 350px);
+    grid-gap: 50px;
+    background-color: grey;
+} */
 
 /* Footer */
 footer {
