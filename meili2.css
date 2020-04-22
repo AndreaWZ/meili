@@ -37,3 +37,37 @@ h2 {
     font-family: Comic Sans MS;
     font-size: 30px;
 }
+
+/* List of Items */
+ul {
+    margin: 50px 250px 0 250px;
+
+}
+li {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 5px rgba(143, 188, 143, 0.753) solid;
+    border-radius: 3px;  
+}
+li:hover {
+    border: 5px #006400 solid;
+    opacity: 0.8;
+}
+li img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+} 
+#name {
+    margin: 0;
+    align-self: center;
+    font-size: 30px;
+    border-bottom: 1px black solid;
+}
+#prices {
+    margin: 0;
+    align-self: center;
+    font-size: 30px;
+    border-bottom: 1px black solid;
+}
