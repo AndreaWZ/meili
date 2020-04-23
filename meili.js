@@ -4,6 +4,7 @@ window.onload = function(){
     shopIcon();
     clickShopIcon();
     modalProducts();
+    infoFromCart();
     // favoriteIcon();
 };
 
@@ -173,10 +174,6 @@ function shopIcon(){
                 numBaskets.style.color = "white";
             };
         });
-        cartIcon[i].addEventListener("click", function(){
-            // console.log(this.parentElement.parentElement);
-            console.log("Clicked!!");
-        })
     };
 };
 function clickShopIcon(){
@@ -232,6 +229,15 @@ function modalProducts(){
     });  
 };
 
+function infoFromCart(){
+    const cartIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
+    for(let i = 0; i < cartIcon.length; i++){
+        cartIcon[i].addEventListener("click", function(){
+            // console.log(earrings[i]);
+            console.log("name: " + earrings[i].url);
+        });
+    };
+};
 // Modal's Favorite 
 // function favoriteIcon(){
 //     const favoriteModal = document.getElementById("favoriteModal");
