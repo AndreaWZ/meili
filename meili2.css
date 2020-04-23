@@ -39,35 +39,71 @@ h2 {
 }
 
 /* List of Items */
-ul {
-    margin: 50px 250px 0 250px;
-
-}
-li {
-    padding: 20px;
+.itemDetails {
+    margin: 10px 225px 0 225px;
+    padding-top: 10px;
     display: flex;
-    justify-content: space-between;
-    border: 5px rgba(143, 188, 143, 0.753) solid;
-    border-radius: 3px;  
+    flex-direction: row;
+    border-top: 3px #006400 solid;
 }
-li:hover {
-    border: 5px #006400 solid;
-    opacity: 0.8;
-}
-li img {
+.img {
     width: 150px;
     height: 150px;
-    border-radius: 5px;
-} 
-#name {
-    margin: 0;
-    align-self: center;
-    font-size: 30px;
-    border-bottom: 1px black solid;
+    margin-left: 10px;
 }
-#prices {
+.descri {
+    position: relative;
+    width: 480px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px black solid;
+}
+.title {
+    display: flex;
+}
+.descri p {
     margin: 0;
-    align-self: center;
-    font-size: 30px;
-    border-bottom: 1px black solid;
+    padding: 0;
+}
+p.name {
+    font-size: 25px;
+}
+p.stock {
+    color: green;
+    font-size: 15px;
+    padding-top: 5px;
+}
+form {
+    margin: 5px 0 0 15px;
+}
+select {
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+}
+.descri i {
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    padding-right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.price p {
+    margin: 0;
+    padding-left: 10px;
+    display: block;
+    font-size: 20px;
+}
+.subtotal {
+    margin: 10px 225px 0 225px;
+    border-top: 3px #006400 solid;
+}
+.subtotal p {
+    margin: 0;
+    padding: 10px 5px 0 0;  
+    text-align: end;
 }
