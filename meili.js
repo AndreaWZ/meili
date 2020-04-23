@@ -4,7 +4,7 @@ window.onload = function(){
     shopIcon();
     clickShopIcon();
     modalProducts();
-    favoriteIcon();
+    // favoriteIcon();
 };
 
 const earrings = [];
