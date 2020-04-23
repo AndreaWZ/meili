@@ -51,6 +51,9 @@ h2 {
     height: 150px;
     margin-left: 10px;
 }
+.img:hover {
+    opacity: 0.8;
+}
 .descri {
     position: relative;
     width: 480px;
