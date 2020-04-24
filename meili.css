@@ -163,8 +163,7 @@ p.title:hover {
     display: none;
     position: fixed; 
     z-index: 1; 
-    padding-top: 68px; 
-    left: 0;
+    padding-top: 50px; 
     top: 0;
     width: 100%; 
     height: 100%; 
@@ -180,13 +179,13 @@ p.title:hover {
     justify-content: center;
     margin: auto;
     max-width: 700px;
-    width: 500px;
-    height: 500px;
+    width: 380px;
+    height: 380px;
     border-radius: 10px;
 }
 #modal {
-    width: 600px;
-    height: 650px;
+    width: 485px;
+    height: 530px;
     padding-top: 35px;
     background-color: white;
     border: 5px rgba(143, 188, 143, 0.753) solid;
@@ -204,13 +203,21 @@ p.title:hover {
     height: 50px;
     font-size: 30px;
 }
-#prodMat, #prodColor {
-    padding-top: 5px;
-    padding-left: 60px;
-    color: gray;
-    font-size: larger;
+#proDesc {
+    display: flex;
+    justify-content: space-between; 
 }
-.modal-content, #prod, #prodMat, #prodColor {  
+#prodMat, #prodColor{
+    padding-top: 5px;
+    padding-left: 50px;
+    font-size: large;
+    color: gray;
+}
+#prodStock {
+    padding: 27px 45px 0 0;
+    font-size: x-large;
+}
+.modal-content, #prod, #prodMat, #prodColor, #prodStock {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.5s;
     animation-name: zoom;
@@ -233,7 +240,6 @@ p.title:hover {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .close:hover {
     text-decoration: none;
     cursor: pointer;
