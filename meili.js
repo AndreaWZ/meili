@@ -4,7 +4,6 @@ window.onload = function(){
     shopIcon();
     clickShopIcon();
     modalProducts();
-    infoFromCart();
     // favoriteIcon();
 };
 
@@ -74,8 +73,11 @@ function shoppingDetails(){
             object['value'] = "$23";
             object['material'] = "Titanium";
             object['color']= "Gold";
+        } if(i % 2 == 0){
+            object['stock'] = "In Stock";
+        } else {
+            object['stock'] = "Sold Out";
         }
-
         earrings.push(object);
     };
     for(let i = 0; i < earrings.length; i++){
@@ -141,10 +143,6 @@ function loveIcon(){
                 numH.style.color = "white";
             };
         }); 
-        heartIcon[i].addEventListener("click", function(){
-            console.log(this.parentElement.parentElement);
-            // console.log("Clicked!!");
-        })
     };
 };
 function shopIcon(){
@@ -191,6 +189,7 @@ function modalProducts(){
     const prodPrice = document.getElementById("prodPrice");
     const prodMat = document.getElementById("prodMat");
     const prodColor = document.getElementById("prodColor");
+    const prodStock = document.getElementById("prodStock");
     const picturesName = document.getElementsByClassName("title");
     const earringsPrice = document.getElementsByClassName("value");
 
@@ -203,6 +202,12 @@ function modalProducts(){
             prodPrice.innerText = earringsPrice[i].textContent;
             prodMat.innerText = "Material: " + earrings[i].material;
             prodColor.innerText = "Color: " + earrings[i].color;
+            prodStock.innerHTML = earrings[i].stock;
+            if(prodStock.textContent === "Sold Out"){
+                prodStock.style.color = "red";
+            } else {
+                prodStock.style.color = "green";
+            }
         });
     };
     const title = document.getElementsByClassName("title");
@@ -227,16 +232,6 @@ function modalProducts(){
     span.addEventListener("click", function(){
         modal.style.display = "none";
     });  
-};
-
-function infoFromCart(){
-    const cartIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
-    for(let i = 0; i < cartIcon.length; i++){
-        cartIcon[i].addEventListener("click", function(){
-            // console.log(earrings[i]);
-            console.log("name: " + earrings[i].url);
-        });
-    };
 };
 // Modal's Favorite 
 // function favoriteIcon(){
