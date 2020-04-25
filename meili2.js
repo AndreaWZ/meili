@@ -9,25 +9,19 @@ const earrings = [];
 const selectValue = [];
 function shoppingDetails(){
     const contentsDiv = document.getElementById("itemDetails");
-    for(let i = 1; i <= 5; i++){
+    for(let i = 1; i <= 3; i++){
         let object = {};
         object["url"] = "pictures/earrings" + i + ".jpg";
         if(i === 1){
             object['title'] = "Reb Bow";
-            object['value'] = "20";
+            object['value'] = "10";
         } else if(i === 2){
             object['title'] = "My Floral";
-            object['value'] = "28";
+            object['value'] = "10";
         } else if(i === 3){
             object['title'] = "My Colors";
-            object['value'] = "25";
-        } else if(i === 4){
-            object['title'] = "My Florals";
-            object['value'] = "28";
-        } else if(i === 5){
-            object['title'] = "My Margarita";
-            object['value'] = "30";
-        }
+            object['value'] = "10";
+        } 
         earrings.push(object);
     };
     for(let i = 1; i < 6; i++){
@@ -98,58 +92,45 @@ function shoppingDetails(){
         title.classList.add("title");
         titleName.classList.add("name");
         p.classList.add("stock");
-        select.classList.add("selected")
+        select.classList.add("selected");
         icon.classList.add("fas");
         icon.classList.add("fa-trash-alt");
         price.classList.add("price");
         span.classList.add("priceNum");
     };
 };
+
 function numItems(){
-    const selected = document.getElementsByClassName("selected")[0];
-    const selected1 = document.getElementsByClassName("selected")[1];
-    const selected2 = document.getElementsByClassName("selected")[2];
-    const selected3 = document.getElementsByClassName("selected")[3];
-    const selected4 = document.getElementsByClassName("selected")[4];   
+    const selected = document.getElementsByClassName("selected");
     const price = document.getElementsByClassName("priceNum");
     const subTotal = document.getElementById("subTotal");
-    let price0;
+    let firP = Number(price[0].textContent);
+    let secP = Number(price[1].textContent);
+    let thiP = Number(price[2].textContent);
+    subTotal.textContent = firP + secP + thiP;
 
-    selected.addEventListener("change", function(){
-        let x = selected.value;
-        let y = earrings[0].value;
-        price0 = x * y;
-        price[0].textContent = price0;
-        subTotal.textContent = price0;
-        console.log(subTotal.textContent + " " + price0);
+    selected[0].addEventListener("change", function(){
+        let sValue = selected[0].value;
+        let eValue = earrings[0].value;
+        price0 = sValue * eValue ;
+        firP = price0;
+        price[0].textContent = firP;
+        subTotal.textContent = firP + secP + thiP;
     });
-    selected1.addEventListener("change", function(){
-        let x = selected1.value;
-        let y = earrings[1].value;
-        price[1].textContent = x * y;
-        console.log(x +"  * "+ y+" total: "+price[1].textContent);
+    selected[1].addEventListener("change", function(){
+        let sValue = selected[1].value;
+        let eValue = earrings[1].value;
+        secP = sValue * eValue;
+        price[1].textContent = secP;
+        subTotal.textContent = firP + secP + thiP;
     });
-    selected2.addEventListener("change", function(){
-        let x = selected2.value;
-        let y = earrings[2].value;
-        price[1].textContent = x * y;
-        console.log(x +"  * "+ y+" total: "+price[2].textContent);
+    selected[2].addEventListener("change", function(){
+        let sValue = selected[2].value;
+        let eValue = earrings[2].value;
+        thiP = sValue * eValue;
+        price[2].textContent = thiP;
+        subTotal.textContent = firP + secP + thiP;
     });
-    selected3.addEventListener("change", function(){
-        let x = selected3.value;
-        let y = earrings[3].value;
-        price[3].textContent = x * y;
-        console.log(x +"  * "+ y+" total: "+price[3].textContent);
-    });
-    selected4.addEventListener("change", function(){
-        let x = selected4.value;
-        let y = earrings[4].value;
-        price[4].textContent = x * y;
-        console.log(x +"  * "+ y+" total: "+price[4].textContent);
-    });
-    for(let i =0; i < price.length; i++){
-        // console.log(price[i].textContent);
-    }
 };
 
 function onclickClose(){
