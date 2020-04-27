@@ -2,7 +2,6 @@ window.onload = function(){
     shoppingDetails();
     loveIcon();
     shopIcon();
-    clickShopIcon();
     modalProducts();
     // favoriteIcon();
 };

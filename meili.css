@@ -18,6 +18,10 @@ h1 {
     font-size: 90px;
     font-family: Brush Script MT;
 }
+h1 a{
+    color: #fbefcc;
+    text-decoration: none;
+}
 #h1Heart {
     font-size: 15px; 
     padding-left:10px; 
@@ -162,7 +166,7 @@ p.title:hover {
 .modal {
     display: none;
     position: fixed; 
-    z-index: 1; 
+    z-index: 999; 
     padding-top: 50px; 
     top: 0;
     width: 100%; 
@@ -281,15 +285,44 @@ footer {
 }
 #footerInfo {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 h3 {
-    margin: 0;
+    height: 75px;
+    margin: 0 0 10px 0;
+    padding: 0 15px 0 40px;
     color: white;
+    font-size: 70px;
+    font-family: fantasy;
+}
+h3 span {
+    font-size: 40px;
+}
+h3 i {
+    padding-left: 5px;
+}
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.text p {
+    margin: 0;
+    padding: 0 0 0 30px;
+    color: white;
+    font-size: 15px;
 }
 .social {
-    padding-left: 10px;
-    cursor: pointer;
+    margin-left: 20px;
+    width: 15%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.social a {
     color: white;
+    padding-left: 30px;
 }

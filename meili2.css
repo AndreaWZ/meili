@@ -18,6 +18,10 @@ h1 {
     font-size: 90px;
     font-family: Brush Script MT;
 }
+h1 a{
+    color: #fbefcc;
+    text-decoration: none;
+}
 #h1Heart {
     font-size: 15px; 
     padding-left:10px; 
@@ -112,7 +116,7 @@ select {
 }
 .subtotal {
     width: 800px;
-    margin: 0 225px 10px 225px;
+    margin: 10px 225px 20px 225px;
     border-top: 3px #006400 solid;
 }
 .subtotal p {
@@ -123,6 +127,13 @@ select {
 }
 footer {
     width: 100%;
-    height: 20%;
+    height: auto;
     background-color: #006400;
+}
+.paymentIcons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 35px;
 }
