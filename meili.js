@@ -3,6 +3,7 @@ window.onload = function(){
     loveIcon();
     shopIcon();
     modalProducts();
+    customerSelect();
     // favoriteIcon();
 };
 
@@ -15,7 +16,7 @@ function shoppingDetails(){
         if(i === 1){
             object['title'] = "Reb Bow";
             object['value'] = "$20";
-            object['material'] = "Silver Split";
+            object['material'] = "Silver";
             object['color']= "Silver | Gold";
         } else if(i === 2){
             object['title'] = "My Floral";
@@ -45,18 +46,18 @@ function shoppingDetails(){
         } else if(i === 7){
             object['title'] = "My Mary";
             object['value'] = "$30";
-            object['material'] = "Gold | Silver";
+            object['material'] = "Gold";
             object['color']= "Gold | Silver";
         } else if(i === 8){
             object['title'] = "My Crazy Love";
             object['value'] = "$29";
-            object['material'] = "Silver Split";
-            object['color']= "Gold | Silver";
+            object['material'] = "Silver";
+            object['color']= "Gold / Silver";
         } else if(i === 9){
             object['title'] = "My Wheel of Love";
             object['value'] = "$35";
             object['material'] = "Titanium";
-            object['color']= "Gold | Silver";
+            object['color']= "Gold / Silver";
         } else if(i === 10){
             object['title'] = "My Brown Flower";
             object['value'] = "$38";
@@ -144,6 +145,7 @@ function loveIcon(){
         }); 
     };
 };
+
 function shopIcon(){
     const shop = document.getElementById("basketIcon");
     const cartIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
@@ -172,12 +174,6 @@ function shopIcon(){
             };
         });
     };
-};
-function clickShopIcon(){
-    const shopIcon = document.getElementById("basketIcon");
-    shopIcon.addEventListener("click", function(){
-        window.document.location = './index2.html';
-    });
 };
 
 // Modal's Products
@@ -226,12 +222,34 @@ function modalProducts(){
     for(let i = 0; i < earringsPrice.length; i++){
     };
     for(let i = 0; i < earrings.length; i++){
+        // console.log(earrings[i]);
     };
     const span = document.getElementsByClassName("close")[0];
     span.addEventListener("click", function(){
         modal.style.display = "none";
     });  
 };
+
+function customerSelect(){
+    const select = document.getElementsByClassName("select");
+    // console.log(select[0]);
+
+    select[0].addEventListener("click", function(){
+        // console.log(select[0].value);
+    })
+    
+    for(let i = 0; i < earrings.length; i++){
+        if(earrings[i].material == "Silver"){
+            earrings[i].type = "1";
+        } else if(earrings[i].material == "Gold"){
+            earrings[i].type = "2";
+        } else if(earrings[i].material == "Titanium"){
+            earrings[i].type = "3";
+        };
+    };
+}
+// console.log(earrings);
+
 // Modal's Favorite 
 // function favoriteIcon(){
 //     const favoriteModal = document.getElementById("favoriteModal");

@@ -108,6 +108,7 @@ function numItems(){
     let secP = Number(price[1].textContent);
     let thiP = Number(price[2].textContent);
     subTotal.textContent = firP + secP + thiP;
+    console.log(selected[0]);
 
     selected[0].addEventListener("change", function(){
         let sValue = selected[0].value;
