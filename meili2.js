@@ -99,7 +99,6 @@ function shoppingDetails(){
         span.classList.add("priceNum");
     };
 };
-
 function numItems(){
     const selected = document.getElementsByClassName("selected");
     const price = document.getElementsByClassName("priceNum");
@@ -133,7 +132,6 @@ function numItems(){
         subTotal.textContent = firP + secP + thiP;
     });
 };
-
 function onclickClose(){
     const deleteIt = document.getElementsByClassName("fa-trash-alt");
     deleteIt[0].addEventListener("click", function(){

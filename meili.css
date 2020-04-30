@@ -71,10 +71,9 @@ select:hover {
     cursor: pointer;
     font-size: 25px;
 }
-#fullHeartIcon {
+#favorite i {
     color: white;
     padding-right: 5px;
-    cursor: pointer;
     font-size: 25px;
 }
 span {
@@ -140,18 +139,14 @@ p.title:hover {
     display: flex;
     justify-content: space-between;
 }
-.fa-cart-plus {
-    font-size:20px;
-    cursor: pointer;
-}
 .fa-cart-plus:hover {
     color: green;
 }
 .fas.fa-cart-arrow-down {
-    font-size:20px;
+    font-size:25px;
     color:green;
 }
-.fa-heart {
+.icons i {
     font-size:25px;
     cursor: pointer;
 }
@@ -254,28 +249,6 @@ p.title:hover {
         width: 100%;
     }
 }
-
-/* Favorite's Modal */
-
-/* #favoriteModal {
-    display: none;
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 68px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(255, 255, 255, 0.801);
-}
-#favoDisplay {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(4, 350px);
-    grid-gap: 50px;
-    background-color: grey;
-} */
 
 /* Footer */
 footer {

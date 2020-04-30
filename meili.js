@@ -3,10 +3,8 @@ window.onload = function(){
     loveIcon();
     shopIcon();
     modalProducts();
-    customerSelect();
-    // favoriteIcon();
+    selection();
 };
-
 const earrings = [];
 function shoppingDetails(){
     const contentsDiv = document.getElementById("contents");
@@ -73,7 +71,8 @@ function shoppingDetails(){
             object['value'] = "$23";
             object['material'] = "Titanium";
             object['color']= "Gold";
-        } if(i % 2 == 0){
+        };
+        if(i % 2 == 0){
             object['stock'] = "In Stock";
         } else {
             object['stock'] = "Sold Out";
@@ -115,7 +114,6 @@ function shoppingDetails(){
         iconShop.classList.add("fas");
     };
 };
-
 function loveIcon(){
     const favorite = document.getElementById("fullHeartIcon");
     const heartIcon = document.getElementsByClassName("fa-heart"+" far");
@@ -145,7 +143,6 @@ function loveIcon(){
         }); 
     };
 };
-
 function shopIcon(){
     const shop = document.getElementById("basketIcon");
     const cartIcon = document.getElementsByClassName("fa-cart-plus"+" fas");
@@ -175,7 +172,6 @@ function shopIcon(){
         });
     };
 };
-
 // Modal's Products
 function modalProducts(){
     const modal = document.getElementById("productModal")
@@ -187,7 +183,6 @@ function modalProducts(){
     const prodStock = document.getElementById("prodStock");
     const picturesName = document.getElementsByClassName("title");
     const earringsPrice = document.getElementsByClassName("value");
-
     const img = document.getElementsByClassName("images");
     for(let i = 0; i < img.length; i++){
         img[i].addEventListener("click", function(){
@@ -216,58 +211,20 @@ function modalProducts(){
             prodColor.innerText = "Color: " + earrings[i].color;
         });
     };
-
     for(let i = 0; i <picturesName.length; i++){
     };
     for(let i = 0; i < earringsPrice.length; i++){
     };
     for(let i = 0; i < earrings.length; i++){
-        // console.log(earrings[i]);
     };
     const span = document.getElementsByClassName("close")[0];
     span.addEventListener("click", function(){
         modal.style.display = "none";
     });  
 };
-
-function customerSelect(){
+function selection(){
     const select = document.getElementsByClassName("select");
-    // console.log(select[0]);
-
     select[0].addEventListener("click", function(){
-        // console.log(select[0].value);
-    })
-    
-    for(let i = 0; i < earrings.length; i++){
-        if(earrings[i].material == "Silver"){
-            earrings[i].type = "1";
-        } else if(earrings[i].material == "Gold"){
-            earrings[i].type = "2";
-        } else if(earrings[i].material == "Titanium"){
-            earrings[i].type = "3";
-        };
-    };
-}
-// console.log(earrings);
-
-// Modal's Favorite 
-// function favoriteIcon(){
-//     const favoriteModal = document.getElementById("favoriteModal");
-//     const modalImg = document.getElementById("img1"); 
-//     const img = document.getElementsByClassName("images");
-//     const prodName = document.getElementById("prodName");
-//     const picturesName = document.getElementsByClassName("title");
-//     const favorite = document.getElementById("fullHeartIcon");
-//     favorite.addEventListener("click", function(){
-//         favoriteModal.style.display = "block";
-//         modalImg.src = img[i].src;
-//         prodName.innerHTML = picturesName[i].textContent;
-//         console.log("Clicked!!");
-//     });
-//     for(let i = 0; i < img.length; i++){
-//     };
-//     const span = document.getElementsByClassName("close")[0];
-//     span.addEventListener("click", function(){
-//         modal.style.display = "none";
-//     });  
-// };
+        alert("It's a Demo!");
+    });
+};
